@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 
 ideas = [
     "A small rabbit teaches a lion a lesson",
@@ -15,5 +16,9 @@ Once upon a time, {idea}.
 In the end, everyone learned an important lesson.
 """
 
-print("Generated Script:")
+# Save script to file
+with open("script.txt", "w") as f:
+    f.write(script)
+
+print("Script saved successfully")
 print(script)
