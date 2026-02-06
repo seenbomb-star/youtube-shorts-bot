@@ -6,8 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-job:
+  run-script:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "Automation system is running successfully"
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run script
+        run: python3 script.py
+
